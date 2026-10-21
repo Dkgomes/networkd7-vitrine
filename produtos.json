@@ -1,0 +1,128 @@
+[
+  {
+    "name": "Google AI Pro / Gemini Pro",
+    "category": "IA",
+    "price": "R$ 19,00",
+    "availability": "Confirmar disponibilidade",
+    "description": "Produto citado no levantamento inicial. Confirme legitimidade, duração e condições antes de anunciar."
+  },
+  {
+    "name": "ChatGPT Plus",
+    "category": "IA",
+    "price": "R$ 30,00",
+    "availability": "Confirmar disponibilidade",
+    "description": "Produto citado no levantamento inicial. Venda somente se tiver autorização e condições compatíveis com os termos do serviço."
+  },
+  {
+    "name": "ChatGPT Pro compartilhado",
+    "category": "IA",
+    "price": "R$ 35,00",
+    "availability": "Confirmar disponibilidade",
+    "description": "Produto citado no levantamento inicial. Verifique autorização e regras de compartilhamento antes de publicar."
+  },
+  {
+    "name": "ChatGPT Go — link promocional",
+    "category": "IA",
+    "price": "A partir de R$ 1,40",
+    "availability": "Confirmar disponibilidade",
+    "description": "Valores e elegibilidade promocional precisam ser conferidos antes de divulgar."
+  },
+  {
+    "name": "Muse AI — créditos",
+    "category": "IA",
+    "price": "R$ 40,00",
+    "availability": "Confirmar disponibilidade",
+    "description": "Produto citado no levantamento inicial; quantidade e validade dos créditos a confirmar."
+  },
+  {
+    "name": "Netflix Premium",
+    "category": "Streaming",
+    "price": "R$ 14,00",
+    "availability": "Confirmar disponibilidade",
+    "description": "Só anuncie se for oferta autorizada e compatível com os termos da plataforma."
+  },
+  {
+    "name": "Prime Video Individual",
+    "category": "Streaming",
+    "price": "R$ 6,50",
+    "availability": "Indisponível (registro anterior)",
+    "description": "O levantamento anterior indicava estoque zero; confirme antes de reativar."
+  },
+  {
+    "name": "HBO Max",
+    "category": "Streaming",
+    "price": "Consultar",
+    "availability": "Confirmar disponibilidade",
+    "description": "Preço e disponibilidade ainda não confirmados."
+  },
+  {
+    "name": "Disney+",
+    "category": "Streaming",
+    "price": "Consultar",
+    "availability": "Confirmar disponibilidade",
+    "description": "Preço e disponibilidade ainda não confirmados."
+  },
+  {
+    "name": "IPTV",
+    "category": "Streaming",
+    "price": "Consultar",
+    "availability": "Não publicar sem comprovação de autorização",
+    "description": "Anuncie apenas serviço licenciado/autorizado, com direitos de distribuição comprováveis."
+  },
+  {
+    "name": "Steam — chave aleatória",
+    "category": "Chaves Steam",
+    "price": "Consultar",
+    "availability": "Confirmar disponibilidade",
+    "description": "Informar região, restrições, plataforma e procedência da chave."
+  },
+  {
+    "name": "Steam — jogo AAA",
+    "category": "Chaves Steam",
+    "price": "Consultar",
+    "availability": "Confirmar disponibilidade",
+    "description": "Informar título exato, região e condições de ativação."
+  },
+  {
+    "name": "Steam — Deluxe / Special Edition",
+    "category": "Chaves Steam",
+    "price": "Consultar",
+    "availability": "Confirmar disponibilidade",
+    "description": "Informar título exato, conteúdo incluído e região."
+  },
+  {
+    "name": "Edição de imagens/vídeos",
+    "category": "Edição",
+    "price": "Consultar",
+    "availability": "Em preparação",
+    "description": "Serviço a definir: escopo, prazo e número de revisões."
+  },
+  {
+    "name": "Métodos e tutoriais",
+    "category": "Métodos",
+    "price": "Consultar",
+    "availability": "Em preparação",
+    "description": "Publique apenas materiais próprios ou licenciados, sem promessas enganosas."
+  },
+  {
+    "name": "Combos digitais",
+    "category": "Combos",
+    "price": "Consultar",
+    "availability": "Em preparação",
+    "description": "Combos serão montados após confirmar os itens e a autorização de revenda."
+  },
+  {
+    "name": "Utilidades digitais",
+    "category": "Utilidades",
+    "price": "Consultar",
+    "availability": "Em preparação",
+    "description": "Adicionar ferramentas/licenças legítimas e descrição clara."
+  },
+  {
+    "name": "Contas e acessos autorizados",
+    "category": "Contas",
+    "price": "Consultar",
+    "availability": "Não publicar sem autorização",
+    "description": "Evite vender credenciais compartilhadas ou contas em desacordo com os termos do fornecedor."
+  }
+]

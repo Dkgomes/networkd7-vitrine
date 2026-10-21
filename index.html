@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#090b12">
+<meta name="description" content="Vitrine digital NetworkD7. Consulte o catálogo e fale pelo WhatsApp ou Telegram.">
+<title>NetworkD7 — Vitrine Digital</title>
+<style>
+:root{color-scheme:dark;--bg:#090b12;--panel:#111522;--line:#252b3c;--text:#f4f6fb;--muted:#9ba5bc;--accent:#73f0c0;--accent2:#7c8cff}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at top,#171d32 0,#090b12 55%);color:var(--text);font:16px/1.5 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+.wrap{width:min(1120px,92%);margin:auto}.top{padding:26px 0;border-bottom:1px solid var(--line)}.brand{font-weight:900;letter-spacing:.08em;font-size:1.1rem}.brand span{color:var(--accent)}.hero{padding:64px 0 38px}.eyebrow{color:var(--accent);font-weight:800;text-transform:uppercase;letter-spacing:.14em;font-size:.76rem}.hero h1{font-size:clamp(2.1rem,6vw,4.4rem);line-height:1.03;max-width:780px;margin:12px 0}.hero p{color:var(--muted);max-width:650px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}.btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 17px;border-radius:12px;text-decoration:none;font-weight:800;border:1px solid var(--line);color:var(--text);background:#171c2b}.btn.primary{background:var(--accent);color:#06120e;border-color:var(--accent)}.section{padding:22px 0 54px}.tools{display:grid;grid-template-columns:1fr auto;gap:12px;margin:16px 0}.search,select{width:100%;padding:13px 14px;border-radius:12px;background:var(--panel);color:var(--text);border:1px solid var(--line);font:inherit}.chips{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0 22px}.chip{border:1px solid var(--line);background:var(--panel);color:var(--muted);padding:8px 12px;border-radius:999px;cursor:pointer}.chip.active{color:#07110e;background:var(--accent);border-color:var(--accent);font-weight:800}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.card{background:linear-gradient(150deg,#151a29,#0f1320);border:1px solid var(--line);border-radius:18px;padding:19px;display:flex;flex-direction:column;min-height:230px}.tag{font-size:.72rem;text-transform:uppercase;letter-spacing:.09em;color:var(--accent);font-weight:800}.card h3{margin:9px 0 7px;font-size:1.08rem}.desc{color:var(--muted);font-size:.9rem;flex:1}.bottom{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:18px}.price{font-weight:900;font-size:1.03rem}.status{font-size:.72rem;color:#f2d69a;border:1px solid #55482d;border-radius:7px;padding:4px 7px}.card .btn{margin-top:14px;width:100%;padding:10px}.notice{padding:14px 16px;border:1px solid var(--line);border-radius:12px;color:var(--muted);font-size:.85rem;margin-top:22px}.foot{border-top:1px solid var(--line);padding:25px 0 40px;color:var(--muted);font-size:.86rem}.empty{color:var(--muted);padding:35px;text-align:center;border:1px dashed var(--line);border-radius:14px;grid-column:1/-1}
+@media(max-width:800px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.hero{padding-top:46px}}@media(max-width:560px){.grid{grid-template-columns:1fr}.tools{grid-template-columns:1fr}.hero{padding-top:36px}.card{min-height:0}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap brand">NETWORK<span>D7</span> <span style="color:#9ba5bc;font-weight:500;letter-spacing:0">/ VITRINE DIGITAL</span></div></header>
+<main class="wrap">
+<section class="hero"><div class="eyebrow">Catálogo • Atendimento direto</div><h1>O digital que você procura, sem complicação.</h1><p>Explore as categorias, confira as informações e chame para confirmar disponibilidade. Atendimento pelo WhatsApp ou Telegram.</p><div class="actions"><a class="btn primary" id="hero-wa" href="#">Falar no WhatsApp</a><a class="btn" id="hero-tg" href="#" target="_blank" rel="noopener">Abrir Telegram</a></div></section>
+<section class="section"><h2>Catálogo</h2><p style="color:var(--muted);margin-top:-8px">Os preços e o estoque são indicativos e precisam ser confirmados no atendimento.</p>
+<div class="tools"><input id="search" class="search" placeholder="Buscar produto..." aria-label="Buscar produto"><select id="sort" aria-label="Ordenar"><option value="default">Ordem do catálogo</option><option value="name">Nome A–Z</option></select></div>
+<div class="chips" id="chips"></div><div class="grid" id="grid"></div>
+<div class="notice">Importante: confirme preço, estoque, prazo, região e condições antes de pagar. Só serão oferecidos produtos digitais com origem legítima e autorização de venda. Nenhum pagamento é feito nesta vitrine.</div>
+</section></main>
+<footer class="foot"><div class="wrap">© <span id="year"></span> NetworkD7 • Catálogo informativo com atendimento humano.<br>Atualize o arquivo <code>produtos.json</code> para editar produtos, preços e disponibilidade.</div></footer>
+<script>
+const WHATSAPP = "5531991925117";
+const TELEGRAM = "networkd7";
+let products = [], category = "Todos";
+const categories = ["Todos","IA","Streaming","Chaves Steam","Edição","Métodos","Combos","Utilidades","Contas"];
+const chips = document.getElementById("chips"), grid = document.getElementById("grid");
+function waLink(p){return "https://wa.me/"+WHATSAPP+"?text="+encodeURIComponent("Olá! Tenho interesse em: "+p.name+". Pode confirmar preço e disponibilidade?");}
+function tgLink(p){return "https://t.me/"+TELEGRAM+"?text="+encodeURIComponent("Olá! Tenho interesse em: "+p.name+". Pode confirmar preço e disponibilidade?");}
+function renderChips(){chips.innerHTML="";categories.forEach(c=>{const b=document.createElement("button");b.className="chip"+(category===c?" active":"");b.textContent=c;b.onclick=()=>{category=c;renderChips();render()};chips.appendChild(b)})}
+function render(){const q=document.getElementById("search").value.trim().toLowerCase();let list=products.filter(p=>(category==="Todos"||p.category===category)&&(`${p.name} ${p.category} ${p.description} ${p.availability}`.toLowerCase().includes(q)));if(document.getElementById("sort").value==="name")list.sort((a,b)=>a.name.localeCompare(b.name,"pt-BR"));grid.innerHTML="";if(!list.length){grid.innerHTML='<div class="empty">Nenhum produto encontrado. Tente outra busca ou categoria.</div>';return}
+list.forEach(p=>{const el=document.createElement("article");el.className="card";const tag=document.createElement("div");tag.className="tag";tag.textContent=p.category;const h=document.createElement("h3");h.textContent=p.name;const d=document.createElement("p");d.className="desc";d.textContent=p.description;const bottom=document.createElement("div");bottom.className="bottom";const price=document.createElement("div");price.className="price";price.textContent=p.price||"Consultar";const status=document.createElement("span");status.className="status";status.textContent=p.availability||"Consultar";bottom.append(price,status);const a=document.createElement("a");a.className="btn primary";a.textContent="Consultar no WhatsApp";a.href=waLink(p);a.target="_blank";a.rel="noopener";const t=document.createElement("a");t.className="btn";t.textContent="Consultar no Telegram";t.href=tgLink(p);t.target="_blank";t.rel="noopener";el.append(tag,h,d,bottom,a,t);grid.appendChild(el)})}
+document.getElementById("search").addEventListener("input",render);document.getElementById("sort").addEventListener("change",render);
+document.getElementById("hero-wa").href="https://wa.me/"+WHATSAPP+"?text="+encodeURIComponent("Olá! Vim pela vitrine NetworkD7 e quero consultar o catálogo.");
+document.getElementById("hero-tg").href="https://t.me/"+TELEGRAM;
+document.getElementById("year").textContent=new Date().getFullYear();
+fetch("produtos.json").then(r=>r.json()).then(data=>{products=data;renderChips();render()}).catch(()=>{grid.innerHTML='<div class="empty">Não foi possível carregar o catálogo. Confira se produtos.json está publicado junto com index.html.</div>';renderChips()});
+</script>
+</body></html>
